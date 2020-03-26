@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+<<<<<<< HEAD
 import ValidationComponent from '../VlidatioComponent/ValidationComponent'
 import CharComponent from '../CharComponent/CharComponent';
 import Radium,{StyleRoot} from 'radium';
@@ -17,6 +18,14 @@ class App extends Component {
 
 
 
+=======
+import Person from '../Components/Persons/Person/Person';
+import ValidationComponent from '../VlidatioComponent/ValidationComponent'
+import CharComponent from '../CharComponent/CharComponent';
+import Radium,{StyleRoot} from 'radium';
+
+class App extends Component {
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
   state = {
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
@@ -25,12 +34,16 @@ class App extends Component {
     ],
     otherState: 'some other value',
     showPersons: false,
+<<<<<<< HEAD
     showCockpit : true , 
+=======
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
     lengthText : null,
     // To Store The Input text Value 
     TheTextContent : "" , 
     ArrChar : []
   }
+<<<<<<< HEAD
   static getDerivedStateFromProps(props , state ){
     console.log('[App.js] getDerivedStaeFromProps',props); 
     return state ; 
@@ -48,6 +61,8 @@ class App extends Component {
  componentDidUpdate(){
    console.log("[App.js] componentDidUpdate... ");
  }
+=======
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
 //------------------------------Function to change the value of name on the component -------------------------------------
   nameChangedHandler = ( event, id ) => {
     // it's will return the first id in the state that have the index like the (id) on the fuction  parameter 
@@ -108,6 +123,7 @@ class App extends Component {
   }
   //---------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
   CockpitShowEvent = () => {
     const CockpitState = this.state.showCockpit ; 
     if (CockpitState){
@@ -121,6 +137,11 @@ class App extends Component {
 
   render () {
     console.log('[App.js] render... ');
+=======
+
+
+  render () {
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
     //---------------------------------- The CSS Style List -------------------------------
     const style = {
       backgroundColor: 'blue',
@@ -142,8 +163,11 @@ class App extends Component {
       </div>
     );
 
+<<<<<<< HEAD
 
     console.log("the persons contains"+[...this.state.persons]);
+=======
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
    var data = ""  ; 
    var Arr = []
    let Charvalue = null
@@ -191,6 +215,7 @@ class App extends Component {
      persons = (
        <StyleRoot>
        <div>
+<<<<<<< HEAD
          {
            <Persons     
            persons={[...this.state.persons]}
@@ -198,10 +223,21 @@ class App extends Component {
            change= {this.nameChangedHandler}
            />
          }
+=======
+         {this.state.persons.map((person, index) => {
+           return <Person
+             click={() => this.deletePersonHandler(index)}
+             name={person.name} 
+             age={person.age}
+             key={person.id}
+             changed={(event) => this.nameChangedHandler(event, person.id)} />
+         })}
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
        </div>
        </StyleRoot>
      );
    }
+<<<<<<< HEAD
    let cockpit = null ; 
 
 
@@ -222,6 +258,28 @@ class App extends Component {
         /> : null 
       }     
      
+=======
+
+   const personStyle = [] ; 
+   // It's affect the buuton style 
+   if (this.state.persons.length  <= 2 )
+      { 
+        personStyle.push('red')
+      } 
+    if(this.state.persons.length <=1 )
+    {
+      personStyle.push('bold') ; 
+    }
+    //------------------------------
+   
+    return (
+      <div className="App">
+        <h1>Hi, I'm a React App</h1>
+        <p className = {personStyle.join(' ')}>This is really working!</p>
+        <button 
+          className = {personStyle.join(' ')}
+          onClick={this.togglePersonsHandler}>Toggle Persons</button>
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
         {persons}    
       </div>
     );

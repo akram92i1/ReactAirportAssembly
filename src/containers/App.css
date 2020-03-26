@@ -9,7 +9,11 @@
 .bold{
   font-weight:  bold ; 
 }
+<<<<<<< HEAD
 .App  button {
+=======
+.App button {
+>>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
   border:  1px solid rgb(48, 46, 49) ; 
   padding:  16px ;
   background-color  : green ; 
