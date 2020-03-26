@@ -1,0 +1,32 @@
+
+.Cockpit {
+  text-align:  center;
+}
+.red {
+    color:  red ; 
+  }
+  
+  .bold{
+    font-weight:  bold ; 
+  }
+
+
+  .Cockpit  button {
+    border:  1px solid rgb(48, 46, 49) ; 
+    padding:  16px ;
+    background-color  : green ; 
+    font: inherit;
+  
+  }
+  
+  .Cockpit button:hover { 
+    background-color : red ;
+    color : black ; 
+  }
+  
+  .Cockpit button.red:hover {
+    background-color: tan;
+    cursor: pointer;
+    font-family: 'consolas';
+  }
+  
