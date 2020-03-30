@@ -48,13 +48,3 @@ class Persons extends Component  {
    }
 
 export default Persons ; 
-=======
-import React , {Component} from 'react'
-import Person from './Person/Person';
-
-class Persons extends Component {
-    render() {
-        return 
-    }
-}
->>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
