@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-<<<<<<< HEAD
+
 import ValidationComponent from '../VlidatioComponent/ValidationComponent'
 import CharComponent from '../CharComponent/CharComponent';
 import Radium,{StyleRoot} from 'radium';
@@ -17,15 +17,12 @@ class App extends Component {
   }
 
 
-
-=======
 import Person from '../Components/Persons/Person/Person';
 import ValidationComponent from '../VlidatioComponent/ValidationComponent'
 import CharComponent from '../CharComponent/CharComponent';
 import Radium,{StyleRoot} from 'radium';
 
 class App extends Component {
->>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
   state = {
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
@@ -36,14 +33,13 @@ class App extends Component {
     showPersons: false,
 <<<<<<< HEAD
     showCockpit : true , 
-=======
->>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
+
+
     lengthText : null,
     // To Store The Input text Value 
     TheTextContent : "" , 
     ArrChar : []
   }
-<<<<<<< HEAD
   static getDerivedStateFromProps(props , state ){
     console.log('[App.js] getDerivedStaeFromProps',props); 
     return state ; 
@@ -163,11 +159,9 @@ class App extends Component {
       </div>
     );
 
-<<<<<<< HEAD
+
 
     console.log("the persons contains"+[...this.state.persons]);
-=======
->>>>>>> a23d5de049afe3effdb25e3f8a2ae537ac325bfb
    var data = ""  ; 
    var Arr = []
    let Charvalue = null
@@ -215,7 +209,6 @@ class App extends Component {
      persons = (
        <StyleRoot>
        <div>
-<<<<<<< HEAD
          {
            <Persons     
            persons={[...this.state.persons]}
@@ -223,7 +216,6 @@ class App extends Component {
            change= {this.nameChangedHandler}
            />
          }
-=======
          {this.state.persons.map((person, index) => {
            return <Person
              click={() => this.deletePersonHandler(index)}
@@ -258,7 +250,7 @@ class App extends Component {
         /> : null 
       }     
      
-=======
+
 
    const personStyle = [] ; 
    // It's affect the buuton style 
