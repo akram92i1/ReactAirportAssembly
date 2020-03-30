@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React , {Component} from 'react';
 import Person from './Person/Person';
 
